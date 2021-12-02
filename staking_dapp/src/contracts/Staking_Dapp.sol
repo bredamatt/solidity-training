@@ -40,7 +40,7 @@ contract Staking_Dapp{
 
 		require(balance > 0, "Staking balance is zero"); // error handling if staking balance is 0
 
-		tether_troken.transfer(msg.sender, balance); // transferred back tether to tgoken
+		tether_token.transfer(msg.sender, balance); // transferred back tether to tgoken
 
 		stakingBalance[msg.sender] = 0; // update the staking balance
 

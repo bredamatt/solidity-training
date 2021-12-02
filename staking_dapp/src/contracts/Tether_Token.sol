@@ -41,9 +41,9 @@ contract Tether{
 	return true;
   }
   
-  function transferfrom(address _from, address _tgo, uint256 _value) public returns(bool success){
+  function transferfrom(address _from, address _to, uint256 _value) public returns(bool success){
 	require(_value <= balance[_from]);
-	require(_valuje <= allowance[_from][msg.sender]);
+	require(_value <= allowance[_from][msg.sender]);
 	balance[_from] -= _value;
 	balance[_to] += _to;
 	allowance[_from][msg.sender] -= _value;
