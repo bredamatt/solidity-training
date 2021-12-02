@@ -21,7 +21,7 @@ contract Staking_Dapp{
 	}
 
 	function stakeTokens(uint _amount) public{
-		require(_)amount > 0, "amount cannot be zero"); // Error handling for case when amount is 0
+		require(_amount > 0, "amount cannot be zero"); // Error handling for case when amount is 0
 		
 		tether_token.transferfrom(msg.sender, address(this), _amount); // Transferred tether to contract address
 
