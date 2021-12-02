@@ -11,13 +11,13 @@ contract Tether{
   event Transfer(
   	address indexed _from,
 	address indexed _to,
-	uint _value,
+	uint _value
   );
   
   event Approve(
 	address indexed _from,
 	address indexed _to,
-	uint _value,
+	uint _value
   );
 
   mapping(address => uint256) public balance;
