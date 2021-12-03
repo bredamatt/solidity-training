@@ -1,5 +1,5 @@
-const Dummy_Token = artifacts.require("Dummy_Token");
-const Tether_Token = artifcats.require("Tether_Token");
+const Dummy_Token = artifacts.require("Dummy");
+const Tether_Token = artifacts.require("Tether");
 const Staking_Dapp = artifacts.require("Staking_Dapp");
 
 module.exports = async function(deployer, network, accounts){
@@ -21,5 +21,4 @@ module.exports = async function(deployer, network, accounts){
 
 	// Transer Tether tokens to the 1st Ganache account
 	await tether_token.transfer(accounts[1], '1000000000000000000000000')
-
 }
