@@ -40,12 +40,13 @@ contract Dummy{
 	return true;
   }
   
-  function transferfrom(address _from, address _to, uint256<F6><F4><F7><F10>
-  _value) public returns(bool success){
+  function transferfrom(address _from, address _to, uint256 _value) public returns(bool success){
 	require(_value <= balance[_from]);
 	require(_value <= allowance[_from][msg.sender]);
+
 	balance[_from] -= _value;
-	balance[_to] += _to;
+	balance[_to] += _value;
+
 	allowance[_from][msg.sender] -= _value;
 	emit Transfer(_from, _to, _value);
 	return true;
