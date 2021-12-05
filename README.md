@@ -1,1 +1,1 @@
-# solidity-training
+# Solidity React Application
